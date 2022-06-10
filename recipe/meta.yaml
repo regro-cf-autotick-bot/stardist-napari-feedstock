@@ -42,6 +42,7 @@ about:
 
 extra:
   recipe-maintainers:
-    - conda-forge/napari
+    - goanpeca
+    - jaimergp
     - maweigert
     - uschmidt83
