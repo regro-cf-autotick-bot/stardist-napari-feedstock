@@ -1,5 +1,5 @@
 {% set name = "stardist-napari" %}
-{% set version = "2022.7.5" %}
+{% set version = "2022.12.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/stardist-napari-{{ version }}.tar.gz
-  sha256: 64ce4fa611a6c38965ea493cd52b50d5059dbd66f129a9f65f2be232883ba954
+  sha256: 5755327d63a87c088c729e94588b99fc3fc81df55b133da0e9e7fd566362ce3d
 
 build:
   noarch: python
