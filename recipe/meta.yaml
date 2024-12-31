@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: d5fb082f65fd174b3d0862fb471032e0570ed4f09cc0725ceed03ab3423590d9
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - magicgui >=0.4.0
     - napari >=0.4.13
-    - python >=3.7
+    - python >={{ python_min }}
     - stardist >=0.8.3
     - tensorflow
 
@@ -34,6 +34,7 @@ test:
   requires:
     - pip
     - pyqt
+    - python {{ python_min }}
 
 about:
   home: https://github.com/stardist/stardist-napari
